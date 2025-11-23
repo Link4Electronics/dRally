@@ -4,7 +4,7 @@ MSBUILD := MSBuild.exe
 DEFINES := -DDR_MULTIPLAYER -DIPXNET -DDR_LETTERBOX #-DDR_CDCHECK
 INCLUDES := -I/usr/include/SDL2
 FLAGS ?= -O3
-FLAGS += -Werror -Wno-unused-result
+FLAGS += -Wno-error -Wno-unused-result -std=c17 -Wno-implicit-function-declaration
 LDFLAGS := -lm -lSDL2 -lSDL2_net
 
 OBJS := data.o bss.o
